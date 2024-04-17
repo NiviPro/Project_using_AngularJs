@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.27/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="D:\myfiles\nivethitha_novtrdev\assessment\19-01-2022\TicketBookingTask_AngularJs\assets\css\style.css"></link>
+    <title>Ticket Booking Task Using Angular Js</title>
+</head>
+<body ng-app="myApp">
+    <div class="container signIn_form">
+        <div class="welcome_usr">
+        <h1>Welcome  <span>  nivi</span></h1>
+       </div>
+
+       <div ng-controller="ctrl4">
+        <div class="row signIn_btns">
+            <button class="btn btn-primary btn-lg" ng-click="showHideDiv()">Show</button><button class="btn btn-primary btn-lg" ng-click="showHideDiv2()">Bevarage</button>
+        </div>
+
+        <div class="row table" ng-show="myDiv">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Movies</th>
+                    <th>Time</th>
+                    <th>Tickets</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in shows">
+                <td>{{x.movie}}</td>
+                <td>{{x.time}}</td>
+                <td>{{x.tickets}}</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+       
+
+        <div class="row table" ng-show="myDiv2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Rate</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="x in bevarages">
+                    <td>{{x.item}}</td>
+                    <td>{{x.rate}}</td>
+                    <td><input type="number" ng-model="b_amt"></td>
+                    <td>{{b_amt * x.rate || 0}}</td>
+                </tr>
+                </tbody>
+            </table>
+             <h6>Bevarage total: {{b_amt * bvg || 0}} Rs/-</h6>
+            </div>
+        </div>
+
+        <div ng-controller="ctrl5">
+        <div class="total"><button class="btn btn-primary btn-lg" ng-click="showHideDiv3()">Select</button></div> 
+            
+        <div class="container final_val" ng-show="myDiv3">                 
+        <div class="row">
+            <div class="col-md-12"><h4>Select Number Of Tickets</h4></div>
+            <div class="col-md-12">
+                <div class="row multiple">
+                <div class="col-md-3">200</div>
+                <div class="col-md-3">X</div>
+                <div class="col-md-3"><input type="number" ng-model="get_qty"></div>
+                <div class="col-md-3">{{get_qty * ticket || 0}}</div>
+                </div>
+            </div>
+            <div class="col-md-12"><h3>Ticket Amount: {{get_qty * ticket || 0}} Rs/-</h3></div>
+            <div class="col-md-12"><h3>Bevarage:  {{b_amt * bvg || 0}} Rs/-</h3></div>
+            <div class="col-md-12"><h3>Total: {{get_qty * ticket || 0}} Rs/-</h3></div>
+            <div class="col-md-12" ng-controller="ctrl6"><button class="btn btn-primary btn-lg" ng-click="success()">Pay</button></div>
+         </div> 
+        </div>
+      </div> 
+    </div> 
+        <ui-view></ui-view>
+
+    <script src="./assets/js/scriptApp.js"></script>
+</body>
+</html>

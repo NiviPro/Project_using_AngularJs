@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(30deg, #FFA384, #74BDCB);
+    min-height: 100vh;
+}
+.signIn_form .signIn_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signIn_form .signIn_btns .btn-primary{
+    padding: 5px 80px;
+    margin: 40px;
+}
+.signIn_form .signIn_btns .btn-primary a{
+    color: #fff;
+}
+.signIn_form h1 span{
+    text-transform: uppercase;
+}
+.signIn_form .welcome_usr h1{
+    font-family: 'Emilys Candy', cursive;
+}
+.table{
+    border: none;
+}
+.table td{
+    text-align: center;
+    border-top: none !important;
+}
+.table thead th{
+    font-family: 'Emilys Candy', cursive;
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: none !important;
+}
+.table th{
+    border-top: none !important;
+}
+.seclect_btn{
+    width: 100%;
+}
+.total{
+    height: 30vh;
+}
+.total button{
+    float: right !important;
+}
+.final_val .row .col-md-12{
+    text-align: center;
+    font-family: 'Emilys Candy', cursive;
+    margin-bottom: 15px;
+}
+.multiple{
+    margin: 15px 0 !important;
+}
+.finished{
+    text-align: center;
+    font-family: 'Emilys Candy', cursive;
+    line-height: 80vh;    
+}
