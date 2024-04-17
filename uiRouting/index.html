@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.27/angular-ui-router.js"></script>
+    <title>UI Routing</title>
+    
+    <style>.active { color: red; font-weight: bolder; }</style>
+
+</head>
+<body ng-app="heloWorld">
+
+    <a ui-sref="homeleft" ui-sref-active="active">First Page</a> | 
+    <a ui-sref="homecenter" ui-sref-active="active">Second Page</a> |
+    <a ui-sref="homeright" ui-sref-active="active">Third Page</a> |
+
+    <div style="width: 100%; text-align: center;" ui-view>
+       <!-- <ui-view></ui-view> --> 
+    </div>
+    
+    <script src="./assets/js/route.js"></script>
+</body>
+</html>
